@@ -12,7 +12,6 @@
 target/
 
 # Eclipse temporary files
-bin/
 .project
 .classpath
 .settings/

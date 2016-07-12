@@ -1,25 +1,29 @@
 package com.balistra.gameoflife;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-import com.amazonaws.services.dynamodbv2.model.*;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.GetItemRequest;
+import com.amazonaws.services.dynamodbv2.model.GetItemResult;
+import com.amazonaws.services.dynamodbv2.model.PutItemRequest;
+import com.amazonaws.services.dynamodbv2.model.PutItemResult;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClient;
 
-import java.util.HashMap;
-import java.util.Map;
-
 final class AWSHelper {
     static final String SNS_SESSIONS_TOPIC = "GOL_NEW_SESSIONS";
-    static final String SNS_SESSIONS_ARN = "arn:aws:sns:us-east-1:<YOUR ACCOUNT ID HERE>:GOL-NEW-SESSIONS";
+    static final String SNS_SESSIONS_ARN = "arn:aws:sns:us-east-1:155982838515:GOL_NEW_SESSIONS";
     static final String SNS_IMAGES_TOPIC = "GOL_CREATE_IMAGE";
-    static final String SNS_IMAGES_ARN = "arn:aws:sns:us-east-1:<YOUR ACCOUNT ID HERE>:GOL-CREATE-IMAGE";
-    static final String S3_ENDPOINT = "https://s3.amazonaws.com/<YOUR PREFIX HERE>-game-of-life/";
-    static final String S3_NAME = "<YOUR PREFIX HERE>-game-of-life";
+    static final String SNS_IMAGES_ARN = "arn:aws:sns:us-east-1:155982838515:GOL_CREATE_IMAGE";
+    static final String S3_ENDPOINT = "https://s3.amazonaws.com/thunderclouds-game-of-life/";
+    static final String S3_NAME = "thunderclouds-game-of-life";
     static final String DDB_SESSION_TABLE = "GOL-SESSIONS";
     static final String DDB_SESSION_TABLE_KEY = "SESSION-ID";
     static final String DDB_IMAGE_TABLE = "GOL-IMAGES";

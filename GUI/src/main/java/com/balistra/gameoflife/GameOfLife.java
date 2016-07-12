@@ -18,7 +18,7 @@ import javax.swing.WindowConstants;
 public class GameOfLife {
 	private static final long WAIT_TIME = 3000;
 
-	private static final String APIG_GET_GAME_OF_LIFE_API_URL = "https://o8zaufedrd.execute-api.us-east-1.amazonaws.com/dev";
+	private static final String APIG_GET_GAME_OF_LIFE_API_URL = "https://j1dv4s2yr6.execute-api.us-east-1.amazonaws.com/dev";
 	private static final String APIG_GET_SESSION_ID_URL = APIG_GET_GAME_OF_LIFE_API_URL + "/SessionId";
 	private static final String APIG_GET_IMAGE_LOCATION_URL = APIG_GET_GAME_OF_LIFE_API_URL + "/ImageLocation";
 	private static final String WAIT = "wait";
